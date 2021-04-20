@@ -25,6 +25,9 @@ for (let i=0; i < modernMovies.length; i++) {
   console.log(sentence)
 }
 
+//Print the modern movies
+
+
 let classicMovies = [
   { title: `The Wizard of Oz`, quote: `There's no place like home.` },
   { title: `Casablanca`, quote: `Here's looking at you, kid.` },
@@ -34,3 +37,28 @@ let classicMovies = [
   { title: `The Maltese Falcon`, quote: `The stuff that dreams are made of.` },
   { title: `Cool Hand Luke`, quote: `What we've got here is failure to communicate.` },
 ]
+// Loop through the modernMovies Array
+for (let i=0; i < classicMovies.length; i++) {
+  // Store each item in the Array in memory
+  let movie2 = classicMovies[i]
+
+  // Create a sentence to be written out to the JavaScript console
+  let sentence = `"${movie2.quote}" is a quote from ${movie2.title}.`
+
+  // Write the sentence to the JavaScript console
+  console.log(sentence)
+
+  //a function that prints an Arry of movie Objects
+  function printMovies(movies) {
+    //Loop through the movies Arry
+    for (let i=0; i <movies.length;i++) {
+      //store each item in the Arry in memory
+      let movie = movies[i]
+      // create 
+      let sentence = `"${movie.quote}" is a quote from ${movie.title}`
+// write the sentence to the Javacript console
+       console.log (sentence)
+    }
+  }
+}
+printMovies(classicMovies)

@@ -5,7 +5,9 @@
 // in Chrome to see what the data looks like.
 
 // Write a loop to iterate through the product data; each iteration of the loop
+
 // should add each product to the document, by appending HTML to an existing element on the page
+
 // with the class "products". You can use the existing HTML in the "products" element
 // as a template, deleting it when you're finished.
 
@@ -21,13 +23,28 @@ window.addEventListener(`DOMContentLoaded`, async function() {
   // Recipe:
 
   // Create a variable for the products data
+  let productsData = json.products
+ 
+  
+   
 
   // Loop through the products data
-
+  for (i = 0; i < productsData.length; i++) {
     // Create a variable to store each product in memory
-    
+    let product = (productsData[i])
     // Create a variable for the HTML element we're going to add to
-
+    let productList = document.querySelector (`.products`)
     // Insert HTML into the products element, using the data from each product
-
+    productList.insertAdjacentHTML (`beforeend`, `<div class="p-4 w-full md:w-1/2 lg:w-1/3">
+    <div class="border h-full p-4 flex flex-col">
+      <h2 class="text-lg font-bold mb-4">Guitar Strings ${product.name}</h2>
+      <div class="mb-4"><img src=${product.image}>
+      </div>
+      <div class="mb-4 text-gray-900">
+        ${product.description}
+      </div>
+      <div class="mt-auto text-purple-500 text-2xl"> ${product.price}</div>
+    </div>
+  </div>)`)
+  }
 })

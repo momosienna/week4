@@ -26,8 +26,29 @@ let blockchain = [
 console.log(`=== RECIPE #1 ===`)
 // Recipe (algorithm) #1: One line of code inside the loop
 // - write each Object in the blockchain to the JavaScript console using a single line of code
+console.log(blockchain[0])
+console.log(blockchain[1])
+console.log(blockchain[2])
+console.log(blockchain[3])
+console.log(blockchain[4])
+console.log(blockchain[5])
+console.log(blockchain[6])
+console.log(blockchain[7])
+
+for (i=0; i < blockchain.length; i++) {
+  console.log(`${blockchain[i].fromUser} transferred ${blockchain[i].amount} KelloggCoin to ${blockchain[i].toUser}`)
+}
 
 console.log(`=== RECIPE #2 ===`)
 // Recipe (algorithm) #2: Two lines of code inside the loop
 // - create a variable for each "transaction" in the blockchain
 // - write each "transaction" to the JavaScript console
+
+for (let i=0; i<blockchain.length; i++) {
+//code that repeats
+//create a variable for each transaction
+let transaction = blockchain[i]
+console.log(`${transaction.fromUser} transferred ${transaction.amount} KelloggCoin to ${transaction.toUser}`)
+
+//write the transaction to the console
+}
